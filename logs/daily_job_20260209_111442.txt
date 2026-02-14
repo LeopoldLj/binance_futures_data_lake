@@ -1,0 +1,42 @@
+﻿**********************
+Début de la transcription Windows PowerShell
+Heure de début : 20260209111442
+Nom d'utilisateur : ORDI\lolo_
+Utilisateur runAs :  ORDI\lolo_
+Nom de la configuration : 
+Ordinateur : ORDI (Microsoft Windows NT 10.0.26100.0)
+Application hôte : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File .\scripts\daily_job.ps1 -FullVerify
+ID de processus : 34564
+PSVersion: 5.1.26100.7462
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7462
+BuildVersion: 10.0.26100.7462
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+=== DAILY JOB START ===
+ProjectRoot: C:\Users\lolo_\PycharmProjects\binance_futures_data_lake
+PYTHONPATH: C:\Users\lolo_\PycharmProjects\binance_futures_data_lake\src
+LogFile:    C:\Users\lolo_\PycharmProjects\binance_futures_data_lake\logs\daily_job_20260209_111442.txt
+
+[1/6] Collect incremental (RAW M1)...
+
+
+[2/6] Compact staging (merge staged -> part-000)...
+
+
+[3/6] Quick verify (gaps_report)...
+
+
+[4/6] Aggregate derived TFs (M5 / H1 / H4)...
+
+
+[5/6] Derived audit (audit_derived)...
+
+[KO] audit_derived returned 1
+**********************
+Fin de la transcription Windows PowerShell
+Heure de fin : 20260209111450
+**********************

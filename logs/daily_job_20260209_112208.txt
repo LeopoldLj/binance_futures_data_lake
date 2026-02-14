@@ -1,0 +1,38 @@
+﻿**********************
+Début de la transcription Windows PowerShell
+Heure de début : 20260209112208
+Nom d'utilisateur : ORDI\lolo_
+Utilisateur runAs :  ORDI\lolo_
+Nom de la configuration : 
+Ordinateur : ORDI (Microsoft Windows NT 10.0.26100.0)
+Application hôte : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File .\scripts\daily_job.ps1
+ID de processus : 35904
+PSVersion: 5.1.26100.7462
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7462
+BuildVersion: 10.0.26100.7462
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+=== DAILY JOB START ===
+ProjectRoot: C:\Users\lolo_\PycharmProjects\binance_futures_data_lake
+PYTHONPATH: C:\Users\lolo_\PycharmProjects\binance_futures_data_lake\src
+LogFile:    C:\Users\lolo_\PycharmProjects\binance_futures_data_lake\logs\daily_job_20260209_112208.txt
+
+[1/6] Collect incremental (RAW M1)...
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\lolo_\PycharmProjects\binance_futures_data_lake\src\bfdl\cli\collect.py", line 25, in <module>
+    from bfdl.collectors.klines_m1 import collect_symbol_m1
+ImportError: cannot import name 'collect_symbol_m1' from 'bfdl.collectors.klines_m1' (C:\Users\lolo_\PycharmProjects\binance_futures_data_lake\src\bfdl\collectors\klines_m1.py)
+PS>Erreur de terminaison () : « Step failed with exit code 1 : [1/6] Collect incremental (RAW M1)... »
+
+[KO] Exception: Step failed with exit code 1 : [1/6] Collect incremental (RAW M1)...
+=== DAILY JOB FAILED ===
+**********************
+Fin de la transcription Windows PowerShell
+Heure de fin : 20260209112209
+**********************

@@ -1,0 +1,85 @@
+﻿import pandas as pd
+import numpy as np
+
+P = r"C:\Users\lolo_\PycharmProjects\binance_futures_data_lake\data\research_debug\BTCUSDT\joined_20260103_20260110__enriched.parquet"
+df = pd.read_parquet(P)
+
+need_cols = ["t","dir_state","range_pctl","is_add","close","low_plus"]
+missing = [c for c in need_cols if c not in df.columns]
+if missing:
+    raise RuntimeError(f"Missing required columns: {missing}")
+
+# normalize low_plus to boolean
+lp = df["low_plus"]
+if lp.dtype == bool:
+    df["_low_plus_ok"] = lp
+else:
+    # accept 1/"1"/True/"true"/"TRUE"
+    df["_low_plus_ok"] = lp.astype(str).str.lower().isin(["1","true","t","yes","y"])
+
+# rebuild returns if absent
+cols_lower = {c: c.lower() for c in df.columns}
+sret4_col = next((c for c in df.columns if c.lower() in ["sret_4","sret4"]), None)
+sret8_col = next((c for c in df.columns if c.lower() in ["sret_8","sret8"]), None)
+
+if sret4_col is None:
+    df["sret_4"] = np.log(df["close"].shift(-4) / df["close"])
+    sret4_col = "sret_4"
+    print("Built sret_4 from close (log-return, horizon 4).")
+else:
+    print(f"Using existing {sret4_col} for sret_4.")
+
+if sret8_col is None:
+    df["sret_8"] = np.log(df["close"].shift(-8) / df["close"])
+    sret8_col = "sret_8"
+    print("Built sret_8 from close (log-return, horizon 8).")
+else:
+    print(f"Using existing {sret8_col} for sret_8.")
+
+# filter: ADD + policy pass
+d = df[(df["is_add"] == True) & (df["_low_plus_ok"] == True)].copy()
+
+print(f"\nn_add_filtered = {len(d)} (is_add & low_plus)")
+
+# hour_utc
+tt = pd.to_datetime(d["t"], utc=True, errors="coerce")
+d["hour_utc"] = tt.dt.hour
+
+# buckets
+def bucket(x):
+    if pd.isna(x): return "NA"
+    if x < 0.02: return "[0.00,0.02)"
+    if x < 0.04: return "[0.02,0.04)"
+    if x < 0.06: return "[0.04,0.06)"
+    if x < 0.08: return "[0.06,0.08)"
+    if x < 0.10: return "[0.08,0.10)"
+    if x < 0.12: return "[0.10,0.12)"
+    return ">=0.12"
+
+d["rp_bucket"] = d["range_pctl"].map(bucket)
+
+def agg(g):
+    s8 = g[sret8_col].dropna()
+    s4 = g[sret4_col].dropna()
+    return pd.Series({
+        "n": int(len(g)),
+        "mean_sret8": float(s8.mean()) if len(s8) else float("nan"),
+        "wr_sret8": float((s8 > 0).mean()) if len(s8) else float("nan"),
+        "mean_sret4": float(s4.mean()) if len(s4) else float("nan"),
+        "std_sret8": float(s8.std(ddof=1)) if len(s8) > 1 else float("nan"),
+    })
+
+print("\n=== BY SIDE ===")
+print(d.groupby("dir_state").apply(agg).reset_index().to_string(index=False))
+
+print("\n=== BY RP_BUCKET ===")
+out_bucket = d.groupby("rp_bucket").apply(agg).reset_index()
+print(out_bucket.sort_values("rp_bucket").to_string(index=False))
+
+print("\n=== BY HOUR ===")
+out_hour = d.groupby("hour_utc").apply(agg).reset_index()
+print(out_hour.sort_values("n", ascending=False).to_string(index=False))
+
+print("\n=== BY SIDE x RP_BUCKET ===")
+out_sb = d.groupby(["dir_state","rp_bucket"]).apply(agg).reset_index()
+print(out_sb.sort_values(["dir_state","rp_bucket"]).to_string(index=False))

@@ -1,0 +1,5 @@
+gate,rate
+low_plus_true_rate,1.0
+market_ready_true_rate,0.0
+tradable_base_true_rate,0.0
+tradable_override_true_rate,1.0

@@ -1,0 +1,13 @@
+﻿.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Secrets only
+.env
+.env.*
+config/*.local.*

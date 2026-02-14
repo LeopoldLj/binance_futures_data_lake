@@ -1,0 +1,79 @@
+﻿**********************
+Début de la transcription Windows PowerShell
+Heure de début : 20260209125706
+Nom d'utilisateur : ORDI\lolo_
+Utilisateur runAs :  ORDI\lolo_
+Nom de la configuration : 
+Ordinateur : ORDI (Microsoft Windows NT 10.0.26100.0)
+Application hôte : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File .\scripts\daily_job.ps1
+ID de processus : 35376
+PSVersion: 5.1.26100.7462
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7462
+BuildVersion: 10.0.26100.7462
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+=== DAILY JOB START ===
+ProjectRoot: C:\Users\lolo_\PycharmProjects\binance_futures_data_lake
+PYTHONPATH: C:\Users\lolo_\PycharmProjects\binance_futures_data_lake\src
+LogFile:    C:\Users\lolo_\PycharmProjects\binance_futures_data_lake\logs\daily_job_20260209_125706.txt
+
+[1/6] Collect incremental (RAW M1)...
+[START] symbol=BTCUSDT interval=1m limit=1500 write_csv=False
+[START] checkpoint_ms=1770635340001 start_date_ms=None end_ms=None
+[START] start_time_ms=1770635340001
+[RUN] loop=1 start_time_ms=1770635340001
+[FETCH] n=48
+[STAGE] year=2026 month=02 rows=48 file=stage-20260209T115708Z.parquet
+[NEW] new_rows_fetched=48
+[CKPT] next_start_time_ms=1770638220001
+[STOP] up-to-date (within 2m). start=1770638220001 safe_end=1770638108468
+[DONE] collector finished.
+[START] symbol=ETHUSDT interval=1m limit=1500 write_csv=False
+[START] checkpoint_ms=1770635340001 start_date_ms=None end_ms=None
+[START] start_time_ms=1770635340001
+[RUN] loop=1 start_time_ms=1770635340001
+[FETCH] n=48
+[STAGE] year=2026 month=02 rows=48 file=stage-20260209T115709Z.parquet
+[NEW] new_rows_fetched=48
+[CKPT] next_start_time_ms=1770638220001
+[STOP] up-to-date (within 2m). start=1770638220001 safe_end=1770638109392
+[DONE] collector finished.
+
+[2/6] Compact staging BTCUSDT...
+[OK] year=2026/month=02: staged_files=1 rows(before=12238, after=12238)
+[DONE] months_merged=1 total_staged_files=1
+
+[2b/6] Compact staging ETHUSDT...
+[OK] year=2026/month=02: staged_files=1 rows(before=1590, after=1590)
+[DONE] months_merged=1 total_staged_files=1
+
+[3/6] Quick verify (gaps_report)...
+[OK] Aucun gap.
+
+[4/6] Aggregate derived TFs (M5 / H1 / H4)...
+[OK] Aggregated BTCUSDT -> m5 | rows=9 | range=2026-02-09T11:10:00+00:00 -> 2026-02-09T11:50:00+00:00
+[OK] Aucun bucket complet à produire (BTCUSDT, h1)
+[OK] Aucun bucket complet à produire (BTCUSDT, h4)
+[OK] Aggregated ETHUSDT -> m5 | rows=9 | range=2026-02-09T11:10:00+00:00 -> 2026-02-09T11:50:00+00:00
+[OK] Aucun bucket complet à produire (ETHUSDT, h1)
+[OK] Aucun bucket complet à produire (ETHUSDT, h4)
+
+[5/6] Derived audit (audit_derived)...
+Non-increasing steps: 0
+Missing buckets: 0
+Verdict: [OK]
+
+[6/6] Last minute (light)...
+
+
+[Optional] Full verify skipped (use -FullVerify to run it)
+
+=== DAILY JOB DONE ===
+**********************
+Fin de la transcription Windows PowerShell
+Heure de fin : 20260209125718
+**********************

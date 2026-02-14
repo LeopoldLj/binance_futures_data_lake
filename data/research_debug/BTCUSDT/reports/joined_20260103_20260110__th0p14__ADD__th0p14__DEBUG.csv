@@ -1,0 +1,2 @@
+file,rows_total,rows_add,th,market_ready_rate,low_plus_rate,tradable_base_rate,tradable_keep_ready_rate,tradable_override_rate
+C:\Users\lolo_\PycharmProjects\binance_futures_data_lake\data\research_debug\BTCUSDT\reports\joined_20260103_20260110__th0p14__ADD.parquet,70,70,0.14,0.0,1.0,0.0,0.0,1.0

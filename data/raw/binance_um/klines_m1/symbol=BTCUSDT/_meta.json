@@ -1,0 +1,10 @@
+{
+  "dataset": "klines_m1",
+  "endpoint": "https://fapi.binance.com/fapi/v1/klines",
+  "exchange": "binance",
+  "interval": "1m",
+  "market": "um_futures",
+  "symbol": "BTCUSDT",
+  "timezone": "UTC",
+  "created_at_utc": "2026-02-08T16:56:43.869794+00:00"
+}

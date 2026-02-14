@@ -1,0 +1,4 @@
+storage:
+  base_dir: ./data/raw/binance_um
+  write_parquet: true
+  write_csv: false

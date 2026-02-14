@@ -1,0 +1,10 @@
+{
+  "anti_lookahead": true,
+  "created_at_utc": "2026-02-09T09:38:27.486003+00:00",
+  "exchange": "binance",
+  "market": "um_futures",
+  "n_minutes": 240,
+  "source": "derived_from_raw_m1_partitions",
+  "symbol": "BTCUSDT",
+  "tf": "h4"
+}

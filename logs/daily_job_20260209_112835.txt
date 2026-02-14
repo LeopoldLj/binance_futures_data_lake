@@ -1,0 +1,61 @@
+﻿**********************
+Début de la transcription Windows PowerShell
+Heure de début : 20260209112835
+Nom d'utilisateur : ORDI\lolo_
+Utilisateur runAs :  ORDI\lolo_
+Nom de la configuration : 
+Ordinateur : ORDI (Microsoft Windows NT 10.0.26100.0)
+Application hôte : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File .\scripts\daily_job.ps1
+ID de processus : 17768
+PSVersion: 5.1.26100.7462
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7462
+BuildVersion: 10.0.26100.7462
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+=== DAILY JOB START ===
+ProjectRoot: C:\Users\lolo_\PycharmProjects\binance_futures_data_lake
+PYTHONPATH: C:\Users\lolo_\PycharmProjects\binance_futures_data_lake\src
+LogFile:    C:\Users\lolo_\PycharmProjects\binance_futures_data_lake\logs\daily_job_20260209_112835.txt
+
+[1/6] Collect incremental (RAW M1)...
+[START] checkpoint_ms=1770632820001 start_date_ms=None end_ms=None
+[START] start_time_ms=1770632820001
+[STOP] up-to-date (within 2m). start=1770632820001 safe_end=1770632796356
+[DONE] collector finished.
+[START] symbol=ETHUSDT interval=1m limit=1500 write_csv=True
+[START] checkpoint_ms=1770632820001 start_date_ms=None end_ms=None
+[START] start_time_ms=1770632820001
+[STOP] up-to-date (within 2m). start=1770632820001 safe_end=1770632796357
+[DONE] collector finished.
+
+[2/6] Compact staging (merge staged -> part-000)...
+
+
+[3/6] Quick verify (gaps_report)...
+
+
+[4/6] Aggregate derived TFs (M5 / H1 / H4)...
+
+
+[5/6] Derived audit (audit_derived)...
+=== Derived audit: BTCUSDT (h4) ===
+Files: 77
+Range: 2019-10-01T00:00:00+00:00 -> 2026-02-09T04:00:00+00:00
+Rows: 13940
+Expected rows (grid 240min): 13940
+Duplicates (open_time_ms): 0
+Non-increasing steps: 0
+Missing buckets: 0
+Verdict: [OK]
+[KO] Aucun parquet trouvé pour ETHUSDT m5 dans C:\Users\lolo_\PycharmProjects\binance_futures_data_lake\data\derived\binance_um\klines_m5\symbol=ETHUSDT
+[KO] Aucun parquet trouvé pour ETHUSDT h1 dans C:\Users\lolo_\PycharmProjects\binance_futures_data_lake\data\derived\binance_um\klines_h1\symbol=ETHUSDT
+[KO] Aucun parquet trouvé pour ETHUSDT h4 dans C:\Users\lolo_\PycharmProjects\binance_futures_data_lake\data\derived\binance_um\klines_h4\symbol=ETHUSDT
+[KO] audit_derived returned 1
+**********************
+Fin de la transcription Windows PowerShell
+Heure de fin : 20260209112843
+**********************

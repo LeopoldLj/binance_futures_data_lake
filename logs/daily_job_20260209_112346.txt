@@ -1,0 +1,34 @@
+﻿**********************
+Début de la transcription Windows PowerShell
+Heure de début : 20260209112346
+Nom d'utilisateur : ORDI\lolo_
+Utilisateur runAs :  ORDI\lolo_
+Nom de la configuration : 
+Ordinateur : ORDI (Microsoft Windows NT 10.0.26100.0)
+Application hôte : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File .\scripts\daily_job.ps1
+ID de processus : 30676
+PSVersion: 5.1.26100.7462
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7462
+BuildVersion: 10.0.26100.7462
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+=== DAILY JOB START ===
+ProjectRoot: C:\Users\lolo_\PycharmProjects\binance_futures_data_lake
+PYTHONPATH: C:\Users\lolo_\PycharmProjects\binance_futures_data_lake\src
+LogFile:    C:\Users\lolo_\PycharmProjects\binance_futures_data_lake\logs\daily_job_20260209_112346.txt
+
+[1/6] Collect incremental (RAW M1)...
+[KO] Could not find collector entry function in bfdl.collectors.klines_m1
+Expected one of: collect_symbol / collect / run / main_collect / collect_m1 / run_collect
+PS>Erreur de terminaison () : « Step failed with exit code 2 : [1/6] Collect incremental (RAW M1)... »
+
+[KO] Exception: Step failed with exit code 2 : [1/6] Collect incremental (RAW M1)...
+=== DAILY JOB FAILED ===
+**********************
+Fin de la transcription Windows PowerShell
+Heure de fin : 20260209112347
+**********************
