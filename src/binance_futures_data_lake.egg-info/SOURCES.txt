@@ -23,7 +23,16 @@ src/bfdl/core/schema.py
 src/bfdl/core/timeutil.py
 src/bfdl/transforms/__init__.py
 src/bfdl/transforms/aggregate_tf.py
+src/bfdl/transforms/audit_derived.py
+src/bfdl/transforms/backfill_gaps.py
+src/bfdl/transforms/backfill_range.py
+src/bfdl/transforms/compact_months.py
+src/bfdl/transforms/compact_staging.py
+src/bfdl/transforms/fix_meta.py
+src/bfdl/transforms/gaps_report.py
 src/bfdl/transforms/integrity_checks.py
+src/bfdl/transforms/last_minute.py
+src/bfdl/transforms/verify_all.py
 src/binance_futures_data_lake.egg-info/PKG-INFO
 src/binance_futures_data_lake.egg-info/SOURCES.txt
 src/binance_futures_data_lake.egg-info/dependency_links.txt
