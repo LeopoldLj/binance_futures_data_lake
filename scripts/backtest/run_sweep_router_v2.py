@@ -156,7 +156,18 @@ def compute_signals(base: Dict[str, np.ndarray], cfg: Cfg) -> Dict[str, np.ndarr
     trend_short_signal = is_trend & (dstate == "BEAR") & impulse_short
 
     mean_dist_ok = np.abs(close_pos - 0.5) >= cfg.mr_mean_dist
-    atr_pctl_ok = np.isfinite(atr_pct_pctl) & (atr_pct_pctl <= cfg.mr_atr_pctl_max)
+
+    # Support both scales for atr percentile:
+    # - normalized [0,1]
+    # - percentage [0,100]
+    finite_atr = atr_pct_pctl[np.isfinite(atr_pct_pctl)]
+    if finite_atr.size == 0:
+        atr_cap = cfg.mr_atr_pctl_max
+    else:
+        atr_cap = cfg.mr_atr_pctl_max * 100.0 if float(np.nanmax(finite_atr)) > 1.5 else cfg.mr_atr_pctl_max
+
+    # Missing ATR percentile should not hard-block entries.
+    atr_pctl_ok = (~np.isfinite(atr_pct_pctl)) | (atr_pct_pctl <= atr_cap)
 
     mr_long_setup = (
         is_range
