@@ -11,3 +11,6 @@ Thumbs.db
 .env
 .env.*
 config/*.local.*
+
+# Python packaging noise
+*.egg-info/
