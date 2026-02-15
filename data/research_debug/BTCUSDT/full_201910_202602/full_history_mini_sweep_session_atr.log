@@ -1,0 +1,68 @@
+[run_sweep_router_v2] VERSION=2026-02-14-mr-v2
+[INFO] parquet_in=/Users/lolo/PyCharmMiscProject/binance_futures_data_lake/data/research_debug/BTCUSDT/full_201910_202602/joined_full__enriched__router.parquet
+[INFO] ts_col=ts
+[INFO] sweep configs=12
+
+=== SWEEP RESULTS (sorted by pf, avg_r) ===
+                                                                                                                                 cfg       pf     avg_r       sum_r  n_trades  n_range  n_trend  tp_cp  tp1_fraction  mr_sl_atr  vol_filter_high  mr_time_stop    priority  mr_d  mr_rr  mr_cp_low  mr_cp_high  mr_mean_dist  mr_atr_pctl_max  trend_enabled  trend_d  trend_p  trend_rr session_name     session_hours  minute_guard
+C00009_US_15_16_18_tp20.60_tp1f0.60_sl1.8_high1_t20_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.90_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST 0.626411 -0.110489 -167.391380      1515     1515        0    0.6           0.6        1.8             True            20 TREND_FIRST   0.4    1.1        0.2         0.8           0.2             0.90          False      0.2     0.65       0.8  US_15_16_18          15,16,18             5
+C00012_US_15_16_18_tp20.60_tp1f0.60_sl1.8_high1_t30_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.90_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST 0.626411 -0.110489 -167.391380      1515     1515        0    0.6           0.6        1.8             True            30 TREND_FIRST   0.4    1.1        0.2         0.8           0.2             0.90          False      0.2     0.65       0.8  US_15_16_18          15,16,18             5
+C00008_US_15_16_18_tp20.60_tp1f0.60_sl1.8_high1_t20_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.85_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST 0.616340 -0.113472 -167.258131      1474     1474        0    0.6           0.6        1.8             True            20 TREND_FIRST   0.4    1.1        0.2         0.8           0.2             0.85          False      0.2     0.65       0.8  US_15_16_18          15,16,18             5
+C00011_US_15_16_18_tp20.60_tp1f0.60_sl1.8_high1_t30_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.85_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST 0.616340 -0.113472 -167.258131      1474     1474        0    0.6           0.6        1.8             True            30 TREND_FIRST   0.4    1.1        0.2         0.8           0.2             0.85          False      0.2     0.65       0.8  US_15_16_18          15,16,18             5
+C00007_US_15_16_18_tp20.60_tp1f0.60_sl1.8_high1_t20_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.80_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST 0.600437 -0.118502 -170.879430      1442     1442        0    0.6           0.6        1.8             True            20 TREND_FIRST   0.4    1.1        0.2         0.8           0.2             0.80          False      0.2     0.65       0.8  US_15_16_18          15,16,18             5
+C00010_US_15_16_18_tp20.60_tp1f0.60_sl1.8_high1_t30_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.80_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST 0.600437 -0.118502 -170.879430      1442     1442        0    0.6           0.6        1.8             True            30 TREND_FIRST   0.4    1.1        0.2         0.8           0.2             0.80          False      0.2     0.65       0.8  US_15_16_18          15,16,18             5
+   C00003_US_15_20_tp20.60_tp1f0.60_sl1.8_high1_t20_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.90_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST 0.537008 -0.144124 -489.589605      3397     3397        0    0.6           0.6        1.8             True            20 TREND_FIRST   0.4    1.1        0.2         0.8           0.2             0.90          False      0.2     0.65       0.8     US_15_20 15,16,17,18,19,20             5
+   C00006_US_15_20_tp20.60_tp1f0.60_sl1.8_high1_t30_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.90_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST 0.537008 -0.144124 -489.589605      3397     3397        0    0.6           0.6        1.8             True            30 TREND_FIRST   0.4    1.1        0.2         0.8           0.2             0.90          False      0.2     0.65       0.8     US_15_20 15,16,17,18,19,20             5
+   C00001_US_15_20_tp20.60_tp1f0.60_sl1.8_high1_t20_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.80_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST 0.530023 -0.146594 -473.790613      3232     3232        0    0.6           0.6        1.8             True            20 TREND_FIRST   0.4    1.1        0.2         0.8           0.2             0.80          False      0.2     0.65       0.8     US_15_20 15,16,17,18,19,20             5
+   C00004_US_15_20_tp20.60_tp1f0.60_sl1.8_high1_t30_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.80_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST 0.530023 -0.146594 -473.790613      3232     3232        0    0.6           0.6        1.8             True            30 TREND_FIRST   0.4    1.1        0.2         0.8           0.2             0.80          False      0.2     0.65       0.8     US_15_20 15,16,17,18,19,20             5
+   C00002_US_15_20_tp20.60_tp1f0.60_sl1.8_high1_t20_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.85_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST 0.529149 -0.147290 -486.940792      3306     3306        0    0.6           0.6        1.8             True            20 TREND_FIRST   0.4    1.1        0.2         0.8           0.2             0.85          False      0.2     0.65       0.8     US_15_20 15,16,17,18,19,20             5
+   C00005_US_15_20_tp20.60_tp1f0.60_sl1.8_high1_t30_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.85_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST 0.529149 -0.147290 -486.940792      3306     3306        0    0.6           0.6        1.8             True            30 TREND_FIRST   0.4    1.1        0.2         0.8           0.2             0.85          False      0.2     0.65       0.8     US_15_20 15,16,17,18,19,20             5
+
+=== SWEEP RESULTS (n_range > 0) ===
+                                                                                                                                 cfg       pf     avg_r       sum_r  n_trades  n_range  n_trend  tp_cp  tp1_fraction  mr_sl_atr  vol_filter_high  mr_time_stop    priority  mr_d  mr_rr  mr_cp_low  mr_cp_high  mr_mean_dist  mr_atr_pctl_max  trend_enabled  trend_d  trend_p  trend_rr session_name     session_hours  minute_guard
+C00009_US_15_16_18_tp20.60_tp1f0.60_sl1.8_high1_t20_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.90_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST 0.626411 -0.110489 -167.391380      1515     1515        0    0.6           0.6        1.8             True            20 TREND_FIRST   0.4    1.1        0.2         0.8           0.2             0.90          False      0.2     0.65       0.8  US_15_16_18          15,16,18             5
+C00012_US_15_16_18_tp20.60_tp1f0.60_sl1.8_high1_t30_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.90_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST 0.626411 -0.110489 -167.391380      1515     1515        0    0.6           0.6        1.8             True            30 TREND_FIRST   0.4    1.1        0.2         0.8           0.2             0.90          False      0.2     0.65       0.8  US_15_16_18          15,16,18             5
+C00008_US_15_16_18_tp20.60_tp1f0.60_sl1.8_high1_t20_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.85_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST 0.616340 -0.113472 -167.258131      1474     1474        0    0.6           0.6        1.8             True            20 TREND_FIRST   0.4    1.1        0.2         0.8           0.2             0.85          False      0.2     0.65       0.8  US_15_16_18          15,16,18             5
+C00011_US_15_16_18_tp20.60_tp1f0.60_sl1.8_high1_t30_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.85_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST 0.616340 -0.113472 -167.258131      1474     1474        0    0.6           0.6        1.8             True            30 TREND_FIRST   0.4    1.1        0.2         0.8           0.2             0.85          False      0.2     0.65       0.8  US_15_16_18          15,16,18             5
+C00007_US_15_16_18_tp20.60_tp1f0.60_sl1.8_high1_t20_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.80_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST 0.600437 -0.118502 -170.879430      1442     1442        0    0.6           0.6        1.8             True            20 TREND_FIRST   0.4    1.1        0.2         0.8           0.2             0.80          False      0.2     0.65       0.8  US_15_16_18          15,16,18             5
+C00010_US_15_16_18_tp20.60_tp1f0.60_sl1.8_high1_t30_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.80_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST 0.600437 -0.118502 -170.879430      1442     1442        0    0.6           0.6        1.8             True            30 TREND_FIRST   0.4    1.1        0.2         0.8           0.2             0.80          False      0.2     0.65       0.8  US_15_16_18          15,16,18             5
+   C00003_US_15_20_tp20.60_tp1f0.60_sl1.8_high1_t20_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.90_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST 0.537008 -0.144124 -489.589605      3397     3397        0    0.6           0.6        1.8             True            20 TREND_FIRST   0.4    1.1        0.2         0.8           0.2             0.90          False      0.2     0.65       0.8     US_15_20 15,16,17,18,19,20             5
+   C00006_US_15_20_tp20.60_tp1f0.60_sl1.8_high1_t30_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.90_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST 0.537008 -0.144124 -489.589605      3397     3397        0    0.6           0.6        1.8             True            30 TREND_FIRST   0.4    1.1        0.2         0.8           0.2             0.90          False      0.2     0.65       0.8     US_15_20 15,16,17,18,19,20             5
+   C00001_US_15_20_tp20.60_tp1f0.60_sl1.8_high1_t20_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.80_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST 0.530023 -0.146594 -473.790613      3232     3232        0    0.6           0.6        1.8             True            20 TREND_FIRST   0.4    1.1        0.2         0.8           0.2             0.80          False      0.2     0.65       0.8     US_15_20 15,16,17,18,19,20             5
+   C00004_US_15_20_tp20.60_tp1f0.60_sl1.8_high1_t30_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.80_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST 0.530023 -0.146594 -473.790613      3232     3232        0    0.6           0.6        1.8             True            30 TREND_FIRST   0.4    1.1        0.2         0.8           0.2             0.80          False      0.2     0.65       0.8     US_15_20 15,16,17,18,19,20             5
+   C00002_US_15_20_tp20.60_tp1f0.60_sl1.8_high1_t20_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.85_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST 0.529149 -0.147290 -486.940792      3306     3306        0    0.6           0.6        1.8             True            20 TREND_FIRST   0.4    1.1        0.2         0.8           0.2             0.85          False      0.2     0.65       0.8     US_15_20 15,16,17,18,19,20             5
+   C00005_US_15_20_tp20.60_tp1f0.60_sl1.8_high1_t30_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.85_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST 0.529149 -0.147290 -486.940792      3306     3306        0    0.6           0.6        1.8             True            30 TREND_FIRST   0.4    1.1        0.2         0.8           0.2             0.85          False      0.2     0.65       0.8     US_15_20 15,16,17,18,19,20             5
+
+[OK] CSV exported: /Users/lolo/PyCharmMiscProject/binance_futures_data_lake/data/research_debug/BTCUSDT/full_201910_202602/full_history_mini_sweep_session_atr.csv
+
+=== DIAGNOSTIC (top configs) ===
+
+[C00009_US_15_16_18_tp20.60_tp1f0.60_sl1.8_high1_t20_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.90_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST]
+n_trades=1515 n_range=1515 n_trend=0 avg_r=-0.1105 pf=0.6264
+TREND(avg_r=0.0000, pf=0.0000) | RANGE(avg_r=-0.1105, pf=0.6264)
+R-dist p10=-1.0000 p50=0.0000 p90=0.6357
+MR exits SL=34.59% TP=59.21% FLIP=6.20% TIME=0.00%
+
+[C00012_US_15_16_18_tp20.60_tp1f0.60_sl1.8_high1_t30_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.90_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST]
+n_trades=1515 n_range=1515 n_trend=0 avg_r=-0.1105 pf=0.6264
+TREND(avg_r=0.0000, pf=0.0000) | RANGE(avg_r=-0.1105, pf=0.6264)
+R-dist p10=-1.0000 p50=0.0000 p90=0.6357
+MR exits SL=34.59% TP=59.21% FLIP=6.20% TIME=0.00%
+
+[C00008_US_15_16_18_tp20.60_tp1f0.60_sl1.8_high1_t20_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.85_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST]
+n_trades=1474 n_range=1474 n_trend=0 avg_r=-0.1135 pf=0.6163
+TREND(avg_r=0.0000, pf=0.0000) | RANGE(avg_r=-0.1135, pf=0.6163)
+R-dist p10=-1.0000 p50=0.0000 p90=0.6474
+MR exits SL=34.67% TP=59.09% FLIP=6.24% TIME=0.00%
+
+[C00011_US_15_16_18_tp20.60_tp1f0.60_sl1.8_high1_t30_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.85_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST]
+n_trades=1474 n_range=1474 n_trend=0 avg_r=-0.1135 pf=0.6163
+TREND(avg_r=0.0000, pf=0.0000) | RANGE(avg_r=-0.1135, pf=0.6163)
+R-dist p10=-1.0000 p50=0.0000 p90=0.6474
+MR exits SL=34.67% TP=59.09% FLIP=6.24% TIME=0.00%
+
+[C00007_US_15_16_18_tp20.60_tp1f0.60_sl1.8_high1_t20_d0.40_rr1.10_cp0.20_0.80_md0.20_ap0.80_mg5_tr0_td0.20_tp0.65_trr0.80_TREND_FIRST]
+n_trades=1442 n_range=1442 n_trend=0 avg_r=-0.1185 pf=0.6004
+TREND(avg_r=0.0000, pf=0.0000) | RANGE(avg_r=-0.1185, pf=0.6004)
+R-dist p10=-1.0000 p50=0.0000 p90=0.6414
+MR exits SL=34.81% TP=59.02% FLIP=6.17% TIME=0.00%

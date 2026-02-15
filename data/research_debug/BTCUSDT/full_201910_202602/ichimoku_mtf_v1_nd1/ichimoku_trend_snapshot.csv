@@ -1,0 +1,7 @@
+tf,arrow,score_display,bull_score,bear_score,label
+MN1,•,0,0,0,NEUTRE
+W1,↓,15,0,15,SHORT
+D1,↓,15,0,15,SHORT
+H4,↓,10,5,10,SHORT
+H1,↓,12,3,12,SHORT
+M30,↓,10,5,10,SHORT
